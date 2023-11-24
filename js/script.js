@@ -163,7 +163,7 @@ const data =  {
 					"source": "Aristotle"
 					}
 			],
-		"date":"12-05-2023"	
+		"date":"24-11-2023"	
    };
    
    console.log(data.quotes)  
