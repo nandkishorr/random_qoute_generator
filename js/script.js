@@ -168,50 +168,6 @@ const data =  {
    
    console.log(data.quotes)  
 // Create a function for calling random quotes and color
-var quotes=data.quotes
-
-function getrandomQuote(){
-	var randomNumber=Math.floor(Math.random()*(quotes.length))
-	console.log(randomNumber);
-	var randomQuote=quotes[randomNumber]
-	console.log(randomQuote);
-	return randomQuote;
-
-}
-function getRandomColor(){
-	var red=Math.floor(Math.random()*255);
-	var green=Math.floor(Math.random()*255);
-	var blue=Math.floor(Math.random()*255);
-	var color="rgb("+red+","+green+","+blue+")";
-	console.log(color);
-	return color
-}
-// Create a function for printing the output
-function PrintOutput(){
-	var Quote=getrandomQuote();
-	var quoteContainer=document.getElementById("quote-box");
-    var quoteString=`<p class="quote">${Quote.quote}</p><p class="source">${Quote.source}`;
-	if(Quote.citation){
-		quoteString+=`<span class="citation">${Quote.citation}</span>`
-	}
-	if(Quote.year){
-		quoteString+=`<span class="year">${Quote.year}</span></p>`;
-	}
-	else{
-		quoteString+='</p>';
-	}
-	quoteContainer.innerHTML=quoteString
-	document.body.style.backgroundColor=getRandomColor();
-}
-//call the element and addEventListener 
-
-document.getElementById('loadQuote').addEventListener("click",PrintOutput);
-
-// set an interval for 1.5sec to call random quotes
-window.setInterval(function(){
-	PrintOutput();
-},1500)
-
 
 
 
